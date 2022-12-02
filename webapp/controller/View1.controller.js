@@ -9,13 +9,23 @@ sap.ui.define([
 
         return Controller.extend("reqres.controller.View1", {
             onInit: function () {
+
+                let myPathWithoutFile
+                if (window.location.href.indexOf("localhost") == -1) {
+                    const myPath = window.location.pathname
+                    myPathWithoutFile = myPath.substring(0, myPath.lastIndexOf('/'))
+                    console.log(myPathWithoutFile)
+                } else {
+                    myPathWithoutFile = ""
+                }
+
                 var that = this;
                 var oEntry = {};
                 // GET
                 var aData = jQuery.ajax({
                     type: "GET",
                     contentType: "application/json",
-                    url: "/api/users?page=2",
+                    url: myPathWithoutFile + "/api/users?page=2",
                     dataType: "json",
                     async: false,
                     success: function (data, textStatus, jqXHR) {
