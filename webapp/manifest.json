@@ -17,7 +17,7 @@
         },
         "dataSources": {
             "mainService": {
-                "uri": "/api/users/2",
+                "uri": "api/users?page=2",
                 "type": "JSON"
                     }
         },
@@ -80,14 +80,7 @@
                 }
             },
             "": {
-                "type": "sap.ui.model.odata.v2.ODataModel",
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "defaultBindingMode": "TwoWay",
-                    "defaultCountMode": "Inline",
-                    "refreshAfterChange": false
-                }
+                "dataSource": "mainService"
             }
         },
         "resources": {

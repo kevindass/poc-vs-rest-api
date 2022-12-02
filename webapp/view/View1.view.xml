@@ -3,9 +3,9 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <List noDataText="No Data to dislay" id="list0" items="{resData>/}">
+            <List noDataText="No Data to dislay" id="list0" items="{/data}">
                 <items>
-                    <StandardListItem type="Navigation" title="{resData>first_name}" description="{resData>last_name}" id="item0" >
+                    <StandardListItem type="Navigation" title="{first_name}" description="{last_name}" id="item0" >
                     </StandardListItem>
                 </items>
             </List>
