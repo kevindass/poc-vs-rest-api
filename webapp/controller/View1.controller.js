@@ -10,8 +10,12 @@ sap.ui.define([
         return Controller.extend("reqres.controller.View1", {
             onInit: function () {
 
+                // this only works running locally
+                // or when accessing directly from the html5-apps-repo when deployed,
+                // not from within the Fiori Launchpad
+                
                 let myPathWithoutFile
-                if (window.location.href.indexOf("localhost") == -1) {
+                if (window.location.href.indexOf("hana.ondemand") != -1) {
                     const myPath = window.location.pathname
                     myPathWithoutFile = myPath.substring(0, myPath.lastIndexOf('/'))
                     console.log(myPathWithoutFile)
