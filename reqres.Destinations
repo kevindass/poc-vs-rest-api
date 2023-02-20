@@ -1,0 +1,12 @@
+#
+#Mon Feb 20 13:44:12 UTC 2023
+Description=Reqres REST API
+Type=HTTP
+HTML5.DynamicDestination=true
+Authentication=NoAuthentication
+WebIDEUsage=odata_gen
+Name=reqres
+WebIDEEnabled=true
+ProxyType=Internet
+URL=https\://reqres.in
+WebIDESystem=ReqresREST
